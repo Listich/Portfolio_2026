@@ -223,12 +223,12 @@ export default function About() {
                   {MINI_CARDS.map(({ label, val, accent }) => (
                     <div
                       key={label}
-                      style={{ display: 'flex', flexDirection: 'column', gap: 3, padding: '8px 12px', background: 'rgba(255,240,245,0.55)', border: '0.5px solid rgba(194,81,122,0.15)', borderRadius: 4 }}
+                      style={{ display: 'flex', flexDirection: 'column', gap: 3, padding: '10px 8px', background: 'rgba(255,240,245,0.55)', border: '0.5px solid rgba(194,81,122,0.15)', borderRadius: 4 }}
                     >
-                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 8, fontWeight: 700, letterSpacing: '2px', color: '#c2517a' }}>
+                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 10, fontWeight: 700, letterSpacing: '2px', color: '#c2517a' }}>
                         {label}
                       </span>
-                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, fontWeight: 600, color: accent ? '#c2517a' : '#1a0a10', lineHeight: 1.2 }}>
+                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 14, fontWeight: 700, color: accent ? '#c2517a' : '#1a0a10', lineHeight: 1.2 }}>
                         {val}
                       </span>
                     </div>

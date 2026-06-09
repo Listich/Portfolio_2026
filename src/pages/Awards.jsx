@@ -18,11 +18,6 @@ const AWARDS = [
   },
 ]
 
-const UPCOMING = [
-  'Google Summer of Code 2027 — contribution C++ open source',
-  'Certifications à venir — AWS / Swift Certification',
-  'Concours à venir — hackathons IA / systèmes embarqués',
-]
 
 function AwardCard({ card }) {
   return (
@@ -90,23 +85,6 @@ export default function Awards() {
           {AWARDS.map((card, i) => <AwardCard key={i} card={card} />)}
         </div>
 
-        {/* Prochains objectifs */}
-        <div style={{ borderTop: '0.5px solid rgba(194,81,122,0.15)', paddingTop: '3rem' }}>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 24 }}>
-            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, fontWeight: 700, letterSpacing: '0.25em', color: '#c2517a' }}>PROCHAINS OBJECTIFS</span>
-            <span style={{ flex: 1, height: 1, background: 'rgba(194,81,122,0.2)' }} />
-          </div>
-          <ul style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {UPCOMING.map((item, i) => (
-              <li key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
-                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, color: '#c2517a', flexShrink: 0 }}>
-                  {String(i + 1).padStart(2, '0')}.
-                </span>
-                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 12, color: '#7a4a5e', lineHeight: 1.6 }}>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
 
       </div>
     </div>

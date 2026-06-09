@@ -129,7 +129,7 @@ export default function Navbar() {
             ))}
 
             <div style={{ marginTop: 'auto', paddingTop: '2rem' }}>
-              <div style={{ fontFamily: 'DM Mono', fontSize: '10px', color: '#c2517a', letterSpacing: '2px' }}>serena.kifoula@telespazio.com →</div>
+              <div style={{ fontFamily: 'DM Mono', fontSize: '10px', color: '#c2517a', letterSpacing: '2px' }}>serena.kifoula@epitech.eu →</div>
               <div style={{ fontFamily: 'DM Mono', fontSize: '9px', color: 'rgba(244,167,194,0.3)', marginTop: '8px', letterSpacing: '2px' }}>© 2026 / TOULOUSE, FRANCE</div>
             </div>
 

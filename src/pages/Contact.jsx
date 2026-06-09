@@ -74,7 +74,7 @@ export default function Contact() {
         <SectionHeader chapter="CH.06" title="Me " titleEm="contacter" jp="連絡先" />
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mt-2">
+      <div className="contact-split grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mt-2">
 
         {/* ── Left column ── */}
         <div className="flex flex-col gap-8">
@@ -214,6 +214,7 @@ export default function Contact() {
       <motion.img
         src={kimetsuImg}
         alt=""
+        className="contact-deco"
         initial={{ x: 120, opacity: 0 }}
         animate={{ x: 0, opacity: 0.92 }}
         transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}

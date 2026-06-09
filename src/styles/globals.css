@@ -29,6 +29,16 @@ body {
   body { cursor: auto; }
 }
 
+@media (max-width: 768px) {
+  .contact-deco {
+    display: none !important;
+  }
+  .contact-split {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+}
+
 /* Hide scrollbar (carousel) */
 .no-scrollbar {
   scrollbar-width: none;

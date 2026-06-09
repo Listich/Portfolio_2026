@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import SectionHeader from '../components/SectionHeader'
 import kimetsuImg from '../assets/kimetsu.png'
@@ -68,6 +69,23 @@ function Field({ label, children }) {
 }
 
 export default function Contact() {
+  const [status, setStatus] = useState('idle')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setStatus('sending')
+    const formData = new FormData(e.target)
+    try {
+      const res = await fetch('https://formspree.io/f/xrbzgodw', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+      })
+      if (res.ok) { setStatus('success'); e.target.reset() }
+      else setStatus('error')
+    } catch { setStatus('error') }
+  }
+
   return (
     <div className="px-6 md:px-16 py-16 max-w-5xl mx-auto" style={{ color: '#1a0a10' }}>
       <FadeIn>
@@ -161,12 +179,14 @@ export default function Contact() {
         <FadeIn delay={0.15}>
           <form
             className="flex flex-col gap-5"
-            onSubmit={e => e.preventDefault()}
+            onSubmit={handleSubmit}
           >
             <Field label="Nom">
               <input
                 type="text"
+                name="name"
                 placeholder="Votre nom"
+                required
                 className="px-4 py-2.5 transition-shadow duration-200"
                 style={INPUT_STYLE}
                 onFocus={e => (e.currentTarget.style.boxShadow = '0 0 0 2px rgba(194,81,122,0.3)')}
@@ -177,7 +197,9 @@ export default function Contact() {
             <Field label="Email">
               <input
                 type="email"
+                name="email"
                 placeholder="votre@email.com"
+                required
                 className="px-4 py-2.5 transition-shadow duration-200"
                 style={INPUT_STYLE}
                 onFocus={e => (e.currentTarget.style.boxShadow = '0 0 0 2px rgba(194,81,122,0.3)')}
@@ -187,8 +209,10 @@ export default function Contact() {
 
             <Field label="Message">
               <textarea
+                name="message"
                 rows={6}
                 placeholder="Votre message…"
+                required
                 className="px-4 py-2.5 resize-none transition-shadow duration-200"
                 style={{ ...INPUT_STYLE, lineHeight: '1.6' }}
                 onFocus={e => (e.currentTarget.style.boxShadow = '0 0 0 2px rgba(194,81,122,0.3)')}
@@ -198,13 +222,25 @@ export default function Contact() {
 
             <motion.button
               type="submit"
+              disabled={status === 'sending'}
               className="self-start px-8 py-2.5 text-[10px] font-bold tracking-widest rounded"
-              style={{ background: '#c2517a', color: '#fff' }}
+              style={{ background: '#c2517a', color: '#fff', opacity: status === 'sending' ? 0.7 : 1 }}
               whileHover={{ background: '#a83f64' }}
               transition={{ duration: 0.15 }}
             >
-              ENVOYER →
+              {status === 'sending' ? 'ENVOI...' : 'ENVOYER →'}
             </motion.button>
+
+            {status === 'success' && (
+              <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: '#5a8a4a', letterSpacing: '0.05em' }}>
+                ✓ Message envoyé ! Je te répondrai très vite.
+              </div>
+            )}
+            {status === 'error' && (
+              <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: '#c2517a', letterSpacing: '0.05em' }}>
+                ✗ Erreur lors de l'envoi. Réessaie ou écris-moi directement.
+              </div>
+            )}
           </form>
         </FadeIn>
 

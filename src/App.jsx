@@ -1,8 +1,9 @@
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import Cursor     from './components/Cursor'
-import Navbar     from './components/Navbar'
-import Footer     from './components/Footer'
+import Cursor          from './components/Cursor'
+import Navbar          from './components/Navbar'
+import Footer          from './components/Footer'
+import PageTransition  from './components/PageTransition'
 import Home       from './pages/Home'
 import About      from './pages/About'
 import Awards     from './pages/Awards'
@@ -44,6 +45,8 @@ function Layout() {
 
 export default function App() {
   return (
+    <>
+    <PageTransition />
     <Routes>
       <Route element={<Layout />}>
         <Route path="/"           element={<Home />}       />
@@ -55,5 +58,6 @@ export default function App() {
         <Route path="/contact"    element={<Contact />}    />
       </Route>
     </Routes>
+    </>
   )
 }

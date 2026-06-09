@@ -249,10 +249,13 @@ export default function About() {
               <FadeIn delay={0.2}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <p style={{ fontFamily: 'DM Mono, monospace', fontSize: 12, color: '#7a4a5e', lineHeight: 1.9, margin: 0 }}>
-                    Étudiante en Master Informatique à <strong style={{ color: '#c2517a' }}>Epitech Toulouse</strong> (RNCP Niveau 7), je construis des applications mobiles, des frameworks C++ et des expériences web. Lauréate du <strong style={{ color: '#c2517a' }}>Swift Student Challenge 2026</strong> avec Falcis, une app SwiftUI de sensibilisation à la drépanocytose.
+                    Actuellement en <strong style={{ color: '#c2517a' }}>4ᵉ année à EPITECH</strong> et lauréate du <strong style={{ color: '#c2517a' }}>Swift Student Challenge 2026</strong>, je conçois des solutions logicielles innovantes avec une approche centrée sur l'impact et l'utilité concrète.
                   </p>
                   <p style={{ fontFamily: 'DM Mono, monospace', fontSize: 12, color: '#7a4a5e', lineHeight: 1.9, margin: 0 }}>
-                    Passionnée par l'aérospatiale, le HFT et l'entrepreneuriat. En cours&nbsp;: Filgood, Tontine app, Lari learning platform, KURL haircare. Objectif <strong style={{ color: '#1a0a10' }}>GSoC 2027</strong> (C++ XML libraries, ns-3, NASA cFS).
+                    Passionnée par l'ingénierie logicielle, j'évolue aussi bien sur des projets low-level en <strong style={{ color: '#1a0a10' }}>C/C++</strong> que sur le développement d'applications mobiles et web. J'apprécie particulièrement les défis techniques complexes, l'apprentissage continu et la création de produits capables de transformer des idées en solutions utiles au quotidien.
+                  </p>
+                  <p style={{ fontFamily: 'DM Mono, monospace', fontSize: 12, color: '#7a4a5e', lineHeight: 1.9, margin: 0 }}>
+                    Intéressée par l'intelligence artificielle, la data et les systèmes à grande échelle, je cherche constamment à approfondir mes compétences et à contribuer à des projets ambitieux.
                   </p>
                 </div>
               </FadeIn>

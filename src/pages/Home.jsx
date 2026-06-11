@@ -106,7 +106,7 @@ const FEATURED_PROJECTS = [
     jp: 'ニュートリアップ',
     desc: 'App mobile scan codes-barres, scoring nutritionnel en temps réel.',
     tags: ['REACT NATIVE', 'EXPO', 'SUPABASE'],
-    year: '2025',
+    year: '2026',
     github: 'https://github.com/Listich',
   },
   {
@@ -115,7 +115,7 @@ const FEATURED_PROJECTS = [
     jp: 'フィルグッド',
     desc: "Scan étiquettes vêtements ISO 3758, score durabilité. Seule dev ML de l'équipe.",
     tags: ['REACT NATIVE', 'PYTHON', 'ML'],
-    year: '2024',
+    year: '2026',
     github: 'https://github.com/Listich',
   },
   {

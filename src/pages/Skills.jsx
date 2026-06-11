@@ -133,7 +133,7 @@ export default function Skills() {
                 <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1rem' }}>
                   <h2 style={{
                     fontFamily: '"Cormorant Garamond", serif',
-                    fontSize: 'clamp(60px, 8vw, 90px)',
+                    fontSize: 'clamp(36px, 8vw, 90px)',
                     fontWeight: 700,
                     color: '#1a0a10',
                     lineHeight: 0.88,

@@ -79,7 +79,7 @@ export const projects = {
     {
       id: 'PJ.03',
       title: 'Leip Filgood',
-      context: 'Epitech Toulouse · Projet groupe · 2 ans',
+      context: 'Epitech Toulouse · Projet groupe · 2026–2028',
       desc: "Application mobile scannant les étiquettes de soin vêtements (symboles ISO 3758) et générant un score de durabilité. Seule membre technique ML/dev de l'équipe.",
       tags: ['React Native', 'Node.js', 'Python/ML', 'PostgreSQL', 'Redis'],
       badge: 'GROUPE',

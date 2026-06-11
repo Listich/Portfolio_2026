@@ -205,7 +205,7 @@ export default function About() {
           SECTION 2 — PROFILE
       ═══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#fdf6f9', borderTop: '0.5px solid rgba(194,81,122,0.12)' }}>
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-20">
+        <div className="max-w-6xl mx-auto px-4 md:px-16 py-12 md:py-20">
 
           <FadeIn>
             <SectionHead num="#01 / PROFILE" en="PROFILE" jp="基本情報" right="UPDATED 2026.06 / 4ÈME ANNÉE" />
@@ -238,7 +238,7 @@ export default function About() {
             </FadeIn>
 
             {/* Colonne droite — texte + tableau */}
-            <div style={{ flex: 1, minWidth: '280px', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div style={{ flex: 1, minWidth: 'min(280px, 100%)', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
 
               <FadeIn delay={0.14}>
                 <p style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 32, fontStyle: 'italic', color: '#1a0a10', lineHeight: 1.2, margin: 0 }}>
@@ -307,7 +307,7 @@ export default function About() {
           SECTION 3 — EDUCATION
       ═══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#fff0f5', borderTop: '0.5px solid rgba(194,81,122,0.12)' }}>
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-20">
+        <div className="max-w-6xl mx-auto px-4 md:px-16 py-12 md:py-20">
 
           <FadeIn>
             <SectionHead num="#02 / EDUCATION" en="EDUCATION" jp="学歴" right="5 FORMATIONS / FR × US" />
@@ -366,7 +366,7 @@ export default function About() {
           SECTION 4 — EXTRACURRICULAR
       ═══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#fdf6f9', borderTop: '0.5px solid rgba(194,81,122,0.12)' }}>
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-20">
+        <div className="max-w-6xl mx-auto px-4 md:px-16 py-12 md:py-20">
 
           <FadeIn>
             <SectionHead num="#03 / EXTRACURRICULAR" en="EXTRA" jp="課外活動" right="RÔLES & PROJETS" />

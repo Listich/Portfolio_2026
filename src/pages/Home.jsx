@@ -501,6 +501,34 @@ export default function Home() {
       ═══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#fdf6f9', borderTop: '0.5px solid rgba(194,81,122,0.12)' }}>
         <div className="max-w-6xl mx-auto px-8 md:px-16 py-16">
+
+          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
+            <div className="flex flex-col gap-1">
+              <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.3em', color: '#7a4a5e' }}>
+                #01 / PROFIL
+              </span>
+              <span style={{ fontFamily: '"Noto Serif JP", serif', fontSize: 12, color: '#7a4a5e' }}>
+                人物紹介
+              </span>
+              <h2 style={{
+                fontFamily: '"Cormorant Garamond", serif',
+                fontSize: 'clamp(48px, 7vw, 88px)',
+                fontWeight: 700, color: '#1a0a10',
+                lineHeight: 0.88, margin: 0,
+              }}>
+                QUI<br />SUIS-JE
+              </h2>
+            </div>
+            <Link
+              to="/about"
+              style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', color: '#c2517a', textDecoration: 'none', alignSelf: 'flex-end', paddingBottom: '0.5rem' }}
+              onMouseEnter={e => { e.currentTarget.style.opacity = '0.7' }}
+              onMouseLeave={e => { e.currentTarget.style.opacity = '1' }}
+            >
+              EN SAVOIR PLUS →
+            </Link>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3">
             {[
               {

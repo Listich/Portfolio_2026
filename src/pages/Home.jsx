@@ -516,7 +516,7 @@ export default function Home() {
                 fontWeight: 700, color: '#1a0a10',
                 lineHeight: 0.88, margin: 0,
               }}>
-                WHO<br />AM I
+                WHO AM I
               </h2>
             </div>
             <Link

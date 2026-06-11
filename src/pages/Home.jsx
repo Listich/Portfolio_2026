@@ -101,7 +101,16 @@ const WORKS_ITEMS = [
 
 const FEATURED_PROJECTS = [
   {
-    id: 'PJ.01',
+    id: 'PJ.06',
+    title: 'Falcis',
+    jp: 'ファルシス',
+    desc: 'App SwiftUI éducative sur la drépanocytose. Lauréate Apple Swift Student Challenge 2026.',
+    tags: ['SWIFT', 'SWIFTUI', 'IOS'],
+    year: '2026',
+    github: 'https://github.com/Listich/swift-student-challenge-2026',
+  },
+  {
+    id: 'PJ.07',
     title: 'NutriApp',
     jp: 'ニュートリアップ',
     desc: 'App mobile scan codes-barres, scoring nutritionnel en temps réel.',
@@ -110,22 +119,13 @@ const FEATURED_PROJECTS = [
     github: 'https://github.com/Listich/Nuttrition-app',
   },
   {
-    id: 'PJ.02',
-    title: 'Leip Filgood',
-    jp: 'フィルグッド',
-    desc: "Scan étiquettes vêtements ISO 3758, score durabilité. Seule dev ML de l'équipe.",
-    tags: ['REACT NATIVE', 'PYTHON', 'ML'],
+    id: 'PJ.05',
+    title: 'Zappy',
+    jp: 'ザッピー',
+    desc: 'Jeu réseau multijoueur : serveur C, GUI C++ (SFML), IA autonome Python. Protocole custom.',
+    tags: ['C', 'C++', 'PYTHON', 'SFML'],
     year: '2026',
-    github: 'https://github.com/Listich',
-  },
-  {
-    id: 'PJ.03',
-    title: 'XsdGenerator',
-    jp: 'XSD生成',
-    desc: 'Framework C++ solo, génération XSD + publication automatisée Confluence. Stage Telespazio.',
-    tags: ['C++17', 'CMAKE', 'REST'],
-    year: '2026',
-    github: 'https://github.com/Listich',
+    github: 'https://github.com/Listich/Zappy',
   },
 ]
 

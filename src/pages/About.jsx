@@ -211,7 +211,7 @@ export default function About() {
             <SectionHead num="#01 / PROFILE" en="PROFILE" jp="基本情報" right="UPDATED 2026.06 / 4ÈME ANNÉE" />
           </FadeIn>
 
-          <div style={{ display: 'flex', gap: '4rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+          <div className="flex flex-wrap gap-8 md:gap-16 items-start">
 
             {/* Colonne gauche — photo + stats */}
             <FadeIn delay={0.08}>
@@ -372,7 +372,7 @@ export default function About() {
             <SectionHead num="#03 / EXTRACURRICULAR" en="EXTRA" jp="課外活動" right="RÔLES & PROJETS" />
           </FadeIn>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {EXTRA.map((item, i) => (
               <FadeIn key={item.org} delay={i * 0.07}>
                 <div style={{ background: 'white', border: '0.5px solid rgba(194,81,122,0.15)', borderRadius: 4, padding: '1.25rem 1.5rem', boxShadow: '0 2px 8px rgba(194,81,122,0.06)', display: 'flex', flexDirection: 'column', gap: 8, height: '100%' }}>

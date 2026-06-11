@@ -26,9 +26,9 @@ const CONTACT_LINKS = [
   },
   {
     icon: '◈',
-    label: 'Site',
-    value: 'listich.fr',
-    href: 'https://listich.fr',
+    label: 'LinkedIn',
+    value: 'serena-k-53970623b',
+    href: 'https://www.linkedin.com/in/serena-k-53970623b',
   },
   {
     icon: '✉',

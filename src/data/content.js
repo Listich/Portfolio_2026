@@ -122,9 +122,9 @@ export const projects = {
     {
       id: 'PJ.08',
       title: 'ChatTCP',
-      context: 'Projet perso · C++',
-      desc: "Serveur de chat TCP en C++17 utilisant POSIX sockets et select() pour le multiplexage.",
-      tags: ['C++17', 'POSIX', 'Sockets', 'select()'],
+      context: 'Projet perso · Rust',
+      desc: "Serveur de chat TCP en Rust utilisant POSIX sockets et select() pour le multiplexage.",
+      tags: ['Rust', 'TCP', 'Sockets', 'select()'],
       badge: 'PERSO',
     },
     {

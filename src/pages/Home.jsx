@@ -703,54 +703,43 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div>
             {FEATURED_PROJECTS.map(project => (
               <a
                 key={project.id}
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                style={{
-                  textDecoration: 'none',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  background: 'white',
-                  border: '0.5px solid rgba(194,81,122,0.18)',
-                  borderTop: '3px solid #c2517a',
-                  borderRadius: 4,
-                  padding: '1.75rem',
-                  boxShadow: '0 2px 16px rgba(194,81,122,0.07)',
-                  transition: 'transform 0.2s, box-shadow 0.2s',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(194,81,122,0.14)' }}
-                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 2px 16px rgba(194,81,122,0.07)' }}
+                className="project-row"
               >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-                  <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 8, fontWeight: 700, letterSpacing: '2px', color: 'white', background: '#c2517a', padding: '3px 9px', borderRadius: 2 }}>
+                <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', color: '#c2517a', width: 52, flexShrink: 0 }}>
+                  {project.id}
+                </span>
+                <div style={{ width: '22%', minWidth: 110, flexShrink: 0 }}>
+                  <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 20, fontWeight: 600, color: '#1a0a10', lineHeight: 1.1 }}>
+                    {project.title}
+                  </div>
+                  <div style={{ fontFamily: '"Noto Serif JP", serif', fontSize: 9, color: '#7a4a5e', marginTop: 2 }}>
+                    {project.jp}
+                  </div>
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <p style={{ fontSize: 12, color: '#7a4a5e', margin: '0 0 6px 0', lineHeight: 1.5, overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
+                    {project.desc}
+                  </p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                    {project.tags.map(tag => (
+                      <span key={tag} style={{ fontSize: 8, fontWeight: 700, letterSpacing: '0.1em', padding: '2px 6px', border: '1px solid rgba(194,81,122,0.3)', color: '#c2517a' }}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ flexShrink: 0, textAlign: 'right' }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: '#c2517a', marginBottom: 2 }}>
                     {project.year}
-                  </span>
-                  <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, color: '#c2517a', letterSpacing: '2px', opacity: 0.6 }}>
-                    {project.id}
-                  </span>
-                </div>
-
-                <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(22px, 3vw, 28px)', fontWeight: 700, color: '#1a0a10', lineHeight: 1.1, marginBottom: 4 }}>
-                  {project.title}
-                </div>
-                <div style={{ fontFamily: '"Noto Serif JP", serif', fontSize: 9, color: '#7a4a5e', marginBottom: 12 }}>
-                  {project.jp}
-                </div>
-
-                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, color: '#7a4a5e', margin: '0 0 16px 0', lineHeight: 1.75, flex: 1, overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
-                  {project.desc}
-                </p>
-
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
-                  {project.tags.map(tag => (
-                    <span key={tag} style={{ fontFamily: 'DM Mono, monospace', fontSize: 8, fontWeight: 700, letterSpacing: '1px', padding: '2px 8px', border: '0.5px solid rgba(194,81,122,0.25)', borderRadius: 2, color: '#c2517a' }}>
-                      {tag}
-                    </span>
-                  ))}
+                  </div>
+                  <span className="project-arrow" style={{ fontSize: 16, color: '#c2517a' }}>→</span>
                 </div>
               </a>
             ))}

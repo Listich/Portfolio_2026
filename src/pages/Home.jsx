@@ -124,7 +124,7 @@ const FEATURED_PROJECTS = [
     jp: 'ザッピー',
     desc: 'Jeu réseau multijoueur : serveur C, GUI C++ (SFML), IA autonome Python. Protocole custom.',
     tags: ['C', 'C++', 'PYTHON', 'SFML'],
-    year: '2026',
+    year: '2024',
     github: 'https://github.com/Listich/Zappy',
   },
 ]

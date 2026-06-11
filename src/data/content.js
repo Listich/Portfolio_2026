@@ -95,7 +95,7 @@ export const projects = {
     {
       id: 'PJ.05',
       title: 'Zappy',
-      context: 'Epitech Toulouse · Projet école · C / C++ / Python',
+      context: 'Epitech Toulouse · Projet école · 2024 · C / C++ / Python',
       desc: "Jeu réseau multijoueur : serveur C avec gestion des connexions via poll(), interface graphique 2D en C++ (SFML), et IA autonome en Python pour contrôler les joueurs. Protocole personnalisé entre serveur et clients.",
       tags: ['C', 'C++', 'Python', 'SFML', 'Réseau', 'IA', 'poll()'],
       badge: 'ÉCOLE',

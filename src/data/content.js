@@ -110,15 +110,6 @@ export const projects = {
       badge: 'ÉCOLE',
       github: 'https://github.com/Listich/raytracer',
     },
-    {
-      id: 'PJ.05c',
-      title: 'Area',
-      context: 'Epitech Toulouse · Projet école · 2026',
-      desc: "Plateforme d'automatisation type IFTTT/Zapier : services connectés, déclencheurs et actions configurables via une interface web et mobile.",
-      tags: ['Web', 'Mobile', 'API', 'Automation'],
-      badge: 'ÉCOLE',
-      github: 'https://github.com/Listich/Area',
-    },
   ],
   personnel: [
     {

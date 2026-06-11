@@ -93,11 +93,11 @@ function SectionHead({ num, en, jp, right }) {
         </span>
       </div>
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1rem' }}>
-        <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(56px, 7vw, 80px)', fontWeight: 700, color: '#1a0a10', lineHeight: 0.88, margin: 0 }}>
+        <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(32px, 7vw, 80px)', fontWeight: 700, color: '#1a0a10', lineHeight: 0.88, margin: 0 }}>
           {en}
         </h2>
         {right && (
-          <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, color: '#7a4a5e', letterSpacing: '2px', paddingBottom: '0.5rem', flexShrink: 0 }}>
+          <span className="hidden md:block" style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, color: '#7a4a5e', letterSpacing: '2px', paddingBottom: '0.5rem', flexShrink: 0 }}>
             {right}
           </span>
         )}

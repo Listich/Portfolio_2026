@@ -110,7 +110,7 @@ function ProfileFrame() {
   return (
     <div style={{
       position: 'relative',
-      width: '340px',
+      width: 'min(340px, 100%)',
       flexShrink: 0,
       border: '0.5px solid rgba(194,81,122,0.25)',
       borderRadius: '4px',
@@ -215,7 +215,7 @@ export default function About() {
 
             {/* Colonne gauche — photo + stats */}
             <FadeIn delay={0.08}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', width: '320px', flexShrink: 0 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', width: 'min(320px, 100%)', flexShrink: 0 }}>
 
                 <ProfileFrame />
 

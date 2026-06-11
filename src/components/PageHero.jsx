@@ -35,8 +35,8 @@ export default function PageHero({ chapter, chapterTitle, breadcrumb, jp, title,
         clipPath: 'polygon(0 60%, 100% 0%, 100% 100%, 0% 100%)',
       }} />
 
-      {/* Indicateur CHAPTER haut droite */}
-      <div style={{
+      {/* Indicateur CHAPTER haut droite — caché sur mobile */}
+      <div className="hidden md:block" style={{
         position: 'absolute', top: '24px', right: '2.5rem',
         textAlign: 'right', zIndex: 3,
       }}>
@@ -76,7 +76,7 @@ export default function PageHero({ chapter, chapterTitle, breadcrumb, jp, title,
 
         <h1 style={{
           fontFamily: '"Cormorant Garamond", serif',
-          fontSize: 'clamp(60px, 9vw, 110px)',
+          fontSize: 'clamp(36px, 9vw, 110px)',
           fontWeight: 800, lineHeight: 0.9,
           color: 'white',
           letterSpacing: '-2px',

@@ -500,55 +500,73 @@ export default function Home() {
           SECTION 2 — PROFIL RAPIDE
       ═══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#fdf6f9', borderTop: '0.5px solid rgba(194,81,122,0.12)' }}>
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-12">
-          <div
-            className="grid grid-cols-1 md:grid-cols-3"
-            style={{
-              borderTop: '0.5px solid rgba(194,81,122,0.15)',
-              borderBottom: '0.5px solid rgba(194,81,122,0.15)',
-            }}
-          >
+        <div className="max-w-6xl mx-auto px-8 md:px-16 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-3">
             {[
               {
                 num: '01', label: 'FORMATION',
                 title: 'Master Informatique',
-                sub: 'Epitech Toulouse · 2023–2028 · RNCP Niv. 7',
+                sub: 'Epitech Toulouse · 2023–2028',
+                detail: 'RNCP Niveau 7',
                 to: '/about',
               },
               {
                 num: '02', label: 'EXPÉRIENCE',
                 title: 'Stagiaire C++',
                 sub: 'Telespazio France · Avr.–Août 2026',
+                detail: 'Toulouse, DOP/CC',
                 to: '/experience',
               },
               {
                 num: '03', label: 'DISTINCTION',
-                title: 'Swift Student Challenge ☆',
-                sub: 'Apple · WWDC26 · Lauréate 2026',
+                title: 'Swift Student Challenge',
+                sub: 'Apple WWDC26 · Lauréate 2026',
+                detail: '☆ Solo · iOS',
                 to: '/awards',
               },
             ].map((item, i) => (
               <Link
                 key={i}
                 to={item.to}
-                style={{
-                  textDecoration: 'none',
-                  display: 'block',
-                  padding: '2rem 2rem',
-                  transition: 'background 0.2s',
-                }}
                 className={i < 2 ? 'border-b border-[rgba(194,81,122,0.15)] md:border-b-0 md:border-r md:border-[rgba(194,81,122,0.15)]' : ''}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(194,81,122,0.03)' }}
+                style={{ textDecoration: 'none', display: 'block', padding: '3rem 2.5rem', transition: 'background 0.25s' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(194,81,122,0.04)' }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
               >
-                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, letterSpacing: '3px', color: '#c2517a', marginBottom: 10 }}>
-                  {item.num} / {item.label}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
+                  <span style={{
+                    fontFamily: 'DM Mono, monospace', fontSize: 8, fontWeight: 700,
+                    letterSpacing: '3px', color: 'white',
+                    background: '#c2517a', padding: '3px 10px', borderRadius: 2,
+                  }}>
+                    {item.num}
+                  </span>
+                  <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, letterSpacing: '3px', color: '#c2517a' }}>
+                    {item.label}
+                  </span>
                 </div>
-                <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 22, fontWeight: 700, color: '#1a0a10', lineHeight: 1.2, marginBottom: 8 }}>
+
+                <div style={{
+                  fontFamily: '"Cormorant Garamond", serif',
+                  fontSize: 'clamp(28px, 3.5vw, 42px)',
+                  fontWeight: 700, color: '#1a0a10',
+                  lineHeight: 1.05, marginBottom: 16,
+                }}>
                   {item.title}
                 </div>
-                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 10, color: '#7a4a5e', letterSpacing: '0.5px', lineHeight: 1.7 }}>
+
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, color: '#7a4a5e', letterSpacing: '0.3px', lineHeight: 1.8 }}>
                   {item.sub}
+                </div>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 10, color: '#c2517a', letterSpacing: '0.5px', marginTop: 4 }}>
+                  {item.detail}
+                </div>
+
+                <div style={{ marginTop: 24, display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <div style={{ height: '1px', width: 24, background: '#c2517a', opacity: 0.5 }} />
+                  <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 8, letterSpacing: '2px', color: '#c2517a' }}>
+                    VOIR →
+                  </span>
                 </div>
               </Link>
             ))}

@@ -37,7 +37,7 @@ const SECTIONS = [
     num:   '#04 / OUTILS',
     title: 'TOOLS',
     jp:    'ツール',
-    right: '7 OUTILS',
+    right: '4 OUTILS',
     color: '#5a8a4a',
     bg:    '#fff0f5',
     border: 'rgba(90,138,74,0.15)',

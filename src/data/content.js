@@ -147,9 +147,9 @@ export const skills = {
     { name: 'Rust', level: 'notions' },
   ],
   frontend: [
-    { name: 'React / React Native', level: 'avancé' },
+    { name: 'React / React Native', level: 'intermédiaire' },
     { name: 'Expo / Vite',          level: 'intermédiaire' },
-    { name: 'Tailwind CSS',         level: 'avancé' },
+    { name: 'Tailwind CSS',         level: 'intermédiaire' },
     { name: 'Framer Motion',        level: 'intermédiaire' },
     { name: 'SFML / SDL2',          level: 'intermédiaire' },
   ],
@@ -164,9 +164,6 @@ export const skills = {
     { name: 'CMake / Git / GitLab',          level: 'avancé' },
     { name: 'VS Code / Qt6',                 level: 'intermédiaire' },
     { name: 'Linux (Ubuntu, Fedora, Rocky)', level: 'avancé' },
-    { name: 'VirtualBox',                    level: 'notions' },
-    { name: 'POSIX Sockets',                 level: 'intermédiaire' },
     { name: 'Boost',                         level: 'notions' },
-    { name: 'PyInstaller / PyQt6',           level: 'intermédiaire' },
   ],
 }

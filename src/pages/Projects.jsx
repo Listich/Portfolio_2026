@@ -132,6 +132,19 @@ function ProjectCard({ project, color, delay }) {
             </span>
           ))}
         </div>
+
+        {/* Lien externe si présent */}
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, fontWeight: 700, letterSpacing: '2px', color, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4, marginTop: 4 }}
+            onClick={e => e.stopPropagation()}
+          >
+            VOIR LE SITE →
+          </a>
+        )}
       </div>
     </FadeIn>
   )

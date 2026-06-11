@@ -68,10 +68,11 @@ export const projects = {
     {
       id: 'PJ.02',
       title: 'GH Constructions',
-      context: 'Site client · Freelance',
-      desc: 'Site vitrine avec formulaire de contact Formspree.',
-      tags: ['Web', 'HTML/CSS', 'Formspree'],
+      context: 'Site client · Freelance · ghconstruction.fr',
+      desc: 'Projet proposé de ma propre initiative à une entreprise de rénovation sans présence en ligne. Un mois de travail : développement du site vitrine, gestion client (retours itératifs, imprévus, rendez-vous), et remplacement d\'un ancien site obsolète sur Google. Le client avait tenté une solution via ChatGPT sans succès.',
+      tags: ['Web', 'HTML/CSS', 'Formspree', 'Gestion client'],
       badge: 'FREELANCE',
+      link: 'https://www.ghconstruction.fr',
     },
   ],
   ecole: [

@@ -497,99 +497,62 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-          SECTION 3 — HEADLINE (Awards)
+          SECTION 2 — PROFIL RAPIDE
       ═══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#fdf6f9', borderTop: '0.5px solid rgba(194,81,122,0.12)' }}>
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-20">
-
-          <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
-            <div className="flex flex-col gap-1">
-              <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.3em', color: '#7a4a5e' }}>
-                #01 / OVERVIEW
-              </span>
-              <span style={{ fontFamily: '"Noto Serif JP", serif', fontSize: 12, color: '#7a4a5e' }}>
-                受賞歴
-              </span>
-              <h2 style={{
-                fontFamily: '"Cormorant Garamond", serif',
-                fontSize: 'clamp(60px, 8vw, 100px)',
-                fontWeight: 700, color: '#1a0a10',
-                lineHeight: 0.88, margin: 0,
-              }}>
-                HEADLINE
-              </h2>
-            </div>
-            <div style={{ textAlign: 'right', paddingBottom: '0.5rem' }}>
-              <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', color: '#7a4a5e' }}>FEATURED / 1 AWARD</div>
-              <div style={{ fontSize: 9, letterSpacing: '0.2em', color: '#7a4a5e', marginTop: 2 }}>2026</div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 py-12">
+          <div
+            className="grid grid-cols-1 md:grid-cols-3"
+            style={{
+              borderTop: '0.5px solid rgba(194,81,122,0.15)',
+              borderBottom: '0.5px solid rgba(194,81,122,0.15)',
+            }}
+          >
             {[
-              { year: '2026', org: 'APPLE',  badge: 'LAURÉATE', title: 'Falcis — Swift Student Challenge 2026', desc: 'Application SwiftUI éducative sur la drépanocytose. Sélectionnée parmi les lauréats Apple WWDC26.', tags: ['Swift', 'SwiftUI', 'iOS', 'Solo'], incoming: false },
-              { year: '???',  org: 'SOON',   badge: 'INCOMING', title: 'Prochain objectif — GSoC 2027',          desc: 'Google Summer of Code 2027. Contribution open source C++ (XML libraries, ns-3, NASA cFS).',         tags: ['C++', 'Open Source', 'Google'],    incoming: true  },
-            ].map((card, i) => (
-              <div
+              {
+                num: '01', label: 'FORMATION',
+                title: 'Master Informatique',
+                sub: 'Epitech Toulouse · 2023–2028 · RNCP Niv. 7',
+                to: '/about',
+              },
+              {
+                num: '02', label: 'EXPÉRIENCE',
+                title: 'Stagiaire C++',
+                sub: 'Telespazio France · Avr.–Août 2026',
+                to: '/experience',
+              },
+              {
+                num: '03', label: 'DISTINCTION',
+                title: 'Swift Student Challenge ☆',
+                sub: 'Apple · WWDC26 · Lauréate 2026',
+                to: '/awards',
+              },
+            ].map((item, i) => (
+              <Link
                 key={i}
+                to={item.to}
                 style={{
-                  background: 'white',
-                  border: card.incoming ? '1px dashed rgba(194,81,122,0.3)' : '0.5px solid rgba(194,81,122,0.18)',
-                  borderLeft: '3px solid #c2517a',
-                  borderRadius: 4,
-                  padding: '1.25rem 1.5rem',
-                  display: 'flex', gap: '1rem', alignItems: 'flex-start',
-                  opacity: card.incoming ? 0.65 : 1,
-                  boxShadow: '0 2px 12px rgba(194,81,122,0.07)',
-                  transition: 'transform 0.2s, box-shadow 0.2s',
+                  textDecoration: 'none',
+                  display: 'block',
+                  padding: '2rem 2rem',
+                  transition: 'background 0.2s',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(194,81,122,0.12)' }}
-                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)';    e.currentTarget.style.boxShadow = '0 2px 12px rgba(194,81,122,0.07)' }}
+                className={i < 2 ? 'border-b border-[rgba(194,81,122,0.15)] md:border-b-0 md:border-r md:border-[rgba(194,81,122,0.15)]' : ''}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(194,81,122,0.03)' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
               >
-                <div style={{
-                  width: 60, height: 60, borderRadius: '50%',
-                  background: card.incoming ? 'rgba(194,81,122,0.1)' : 'linear-gradient(135deg, #c2517a, #a83f64)',
-                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-                }}>
-                  <span style={{ fontSize: 14, fontWeight: 800, color: card.incoming ? '#c2517a' : 'white', lineHeight: 1 }}>{card.year}</span>
-                  <span style={{ fontSize: 7, letterSpacing: '1px', color: card.incoming ? '#c2517a' : 'rgba(255,255,255,0.7)', marginTop: 2 }}>{card.org}</span>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, letterSpacing: '3px', color: '#c2517a', marginBottom: 10 }}>
+                  {item.num} / {item.label}
                 </div>
-                <div style={{ flex: 1 }}>
-                  <span style={{
-                    display: 'inline-block', fontSize: 9, fontWeight: 700, letterSpacing: '2px',
-                    padding: '2px 8px', borderRadius: 2, marginBottom: 8,
-                    background: card.incoming ? 'transparent' : '#c2517a',
-                    border: card.incoming ? '1px solid #c2517a' : 'none',
-                    color: card.incoming ? '#c2517a' : 'white',
-                  }}>{card.badge}</span>
-                  <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 15, fontWeight: 700, color: '#1a0a10', marginBottom: 6 }}>{card.title}</div>
-                  <div style={{ fontSize: 11, color: '#7a4a5e', lineHeight: 1.7 }}>{card.desc}</div>
-                  <div style={{ display: 'flex', gap: 6, marginTop: 10, flexWrap: 'wrap' }}>
-                    {card.tags.map(t => (
-                      <span key={t} style={{ fontSize: 9, padding: '2px 8px', border: '0.5px solid rgba(194,81,122,0.25)', borderRadius: 2, color: '#c2517a', letterSpacing: '1px' }}>{t}</span>
-                    ))}
-                  </div>
+                <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 22, fontWeight: 700, color: '#1a0a10', lineHeight: 1.2, marginBottom: 8 }}>
+                  {item.title}
                 </div>
-              </div>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 10, color: '#7a4a5e', letterSpacing: '0.5px', lineHeight: 1.7 }}>
+                  {item.sub}
+                </div>
+              </Link>
             ))}
           </div>
-
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Link
-              to="/awards"
-              style={{
-                fontSize: 10, fontWeight: 700, letterSpacing: '0.2em',
-                padding: '10px 28px',
-                border: '1px solid rgba(194,81,122,0.5)',
-                color: '#c2517a', textDecoration: 'none',
-              }}
-              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(194,81,122,0.06)' }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
-            >
-              VOIR TOUS LES PRIX →
-            </Link>
-          </div>
-
         </div>
       </section>
 

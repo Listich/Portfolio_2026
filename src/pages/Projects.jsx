@@ -30,7 +30,7 @@ function SectionHead({ num, en, jp, right, color }) {
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1rem' }}>
         <h2 style={{
           fontFamily: '"Cormorant Garamond", serif',
-          fontSize: 'clamp(52px, 6vw, 70px)',
+          fontSize: 'clamp(32px, 6vw, 70px)',
           fontWeight: 700,
           color: '#1a0a10',
           lineHeight: 0.9,
@@ -39,7 +39,7 @@ function SectionHead({ num, en, jp, right, color }) {
           {en}
         </h2>
         {right && (
-          <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, color: '#7a4a5e', letterSpacing: '2px', paddingBottom: '0.5rem', flexShrink: 0 }}>
+          <span className="hidden md:block" style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, color: '#7a4a5e', letterSpacing: '2px', paddingBottom: '0.5rem', flexShrink: 0 }}>
             {right}
           </span>
         )}
@@ -153,7 +153,7 @@ export default function Projects() {
 
       {/* ─── SECTION 1 — PROFESSIONNEL ─── */}
       <section style={{ background: '#fdf6f9', borderTop: '0.5px solid rgba(194,81,122,0.12)' }}>
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-20">
+        <div className="max-w-6xl mx-auto px-4 md:px-16 py-12 md:py-20">
           <FadeIn>
             <SectionHead
               num="#01 / PROFESSIONNEL"
@@ -173,7 +173,7 @@ export default function Projects() {
 
       {/* ─── SECTION 2 — ÉCOLE ─── */}
       <section style={{ background: '#fff0f5', borderTop: '0.5px solid rgba(139,92,246,0.12)' }}>
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-20">
+        <div className="max-w-6xl mx-auto px-4 md:px-16 py-12 md:py-20">
           <FadeIn>
             <SectionHead
               num="#02 / ÉCOLE"
@@ -193,7 +193,7 @@ export default function Projects() {
 
       {/* ─── SECTION 3 — PERSONNEL ─── */}
       <section style={{ background: '#fdf6f9', borderTop: '0.5px solid rgba(212,168,67,0.18)' }}>
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-20">
+        <div className="max-w-6xl mx-auto px-4 md:px-16 py-12 md:py-20">
           <FadeIn>
             <SectionHead
               num="#03 / PERSONNEL"

@@ -529,43 +529,53 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
                 num: '01', label: 'FORMATION',
                 title: 'Master Informatique',
-                sub: 'Epitech Toulouse · 2023–2028',
-                detail: 'RNCP Niveau 7',
+                desc: 'Epitech Toulouse · 2023–2028',
+                tags: ['RNCP Niv. 7', 'Toulouse', '4ème année'],
                 to: '/about',
               },
               {
                 num: '02', label: 'EXPÉRIENCE',
                 title: 'Stagiaire C++',
-                sub: 'Telespazio France · Avr.–Août 2026',
-                detail: 'Toulouse, DOP/CC',
+                desc: 'Telespazio France · Avr.–Août 2026',
+                tags: ['C++17', 'CMake', 'XML/XSD'],
                 to: '/experience',
               },
               {
                 num: '03', label: 'DISTINCTION',
                 title: 'Swift Student Challenge',
-                sub: 'Apple WWDC26 · Lauréate 2026',
-                detail: '☆ Solo · iOS',
+                desc: 'Apple WWDC26 · Lauréate 2026',
+                tags: ['Swift', 'SwiftUI', 'iOS', '☆ Solo'],
                 to: '/awards',
               },
             ].map((item, i) => (
               <Link
                 key={i}
                 to={item.to}
-                className={i < 2 ? 'border-b border-[rgba(194,81,122,0.15)] md:border-b-0 md:border-r md:border-[rgba(194,81,122,0.15)]' : ''}
-                style={{ textDecoration: 'none', display: 'block', padding: '3rem 2.5rem', transition: 'background 0.25s' }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(194,81,122,0.04)' }}
-                onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
+                style={{
+                  textDecoration: 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  background: 'white',
+                  border: '0.5px solid rgba(194,81,122,0.18)',
+                  borderTop: '3px solid #c2517a',
+                  borderRadius: 4,
+                  padding: '1.75rem 1.75rem',
+                  boxShadow: '0 2px 16px rgba(194,81,122,0.07)',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(194,81,122,0.14)' }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 2px 16px rgba(194,81,122,0.07)' }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 18 }}>
                   <span style={{
                     fontFamily: 'DM Mono, monospace', fontSize: 8, fontWeight: 700,
-                    letterSpacing: '3px', color: 'white',
-                    background: '#c2517a', padding: '3px 10px', borderRadius: 2,
+                    letterSpacing: '2px', color: 'white',
+                    background: '#c2517a', padding: '3px 9px', borderRadius: 2,
                   }}>
                     {item.num}
                   </span>
@@ -576,25 +586,28 @@ export default function Home() {
 
                 <div style={{
                   fontFamily: '"Cormorant Garamond", serif',
-                  fontSize: 'clamp(28px, 3.5vw, 42px)',
+                  fontSize: 'clamp(24px, 3vw, 36px)',
                   fontWeight: 700, color: '#1a0a10',
-                  lineHeight: 1.05, marginBottom: 16,
+                  lineHeight: 1.1, marginBottom: 10,
                 }}>
                   {item.title}
                 </div>
 
-                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, color: '#7a4a5e', letterSpacing: '0.3px', lineHeight: 1.8 }}>
-                  {item.sub}
-                </div>
-                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 10, color: '#c2517a', letterSpacing: '0.5px', marginTop: 4 }}>
-                  {item.detail}
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, color: '#7a4a5e', lineHeight: 1.8, marginBottom: 16 }}>
+                  {item.desc}
                 </div>
 
-                <div style={{ marginTop: 24, display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ height: '1px', width: 24, background: '#c2517a', opacity: 0.5 }} />
-                  <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 8, letterSpacing: '2px', color: '#c2517a' }}>
-                    VOIR →
-                  </span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 'auto' }}>
+                  {item.tags.map(t => (
+                    <span key={t} style={{
+                      fontFamily: 'DM Mono, monospace', fontSize: 9,
+                      padding: '2px 8px',
+                      border: '0.5px solid rgba(194,81,122,0.25)',
+                      borderRadius: 2, color: '#c2517a', letterSpacing: '1px',
+                    }}>
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </Link>
             ))}

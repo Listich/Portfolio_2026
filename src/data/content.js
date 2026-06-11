@@ -103,6 +103,15 @@ export const projects = {
     },
     {
       id: 'PJ.05b',
+      title: 'Raytracer',
+      context: 'Epitech Toulouse · OOP · C++20',
+      desc: "Moteur de rendu 3D par lancer de rayons. Génère des images réalistes depuis un fichier de scène libconfig++ (sphères, cylindres, cônes, plans). Architecture Factory + Composite pattern.",
+      tags: ['C++20', 'libconfig++', 'Factory', 'Composite', '3D'],
+      badge: 'ÉCOLE',
+      github: 'https://github.com/Listich/raytracer',
+    },
+    {
+      id: 'PJ.05c',
       title: 'Area',
       context: 'Epitech Toulouse · Projet école · 2026',
       desc: "Plateforme d'automatisation type IFTTT/Zapier : services connectés, déclencheurs et actions configurables via une interface web et mobile.",

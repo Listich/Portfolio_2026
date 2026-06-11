@@ -107,7 +107,7 @@ const FEATURED_PROJECTS = [
     desc: 'App mobile scan codes-barres, scoring nutritionnel en temps réel.',
     tags: ['REACT NATIVE', 'EXPO', 'SUPABASE'],
     year: '2026',
-    github: 'https://github.com/Listich',
+    github: 'https://github.com/Listich/Nuttrition-app',
   },
   {
     id: 'PJ.02',

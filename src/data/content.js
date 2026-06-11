@@ -99,6 +99,16 @@ export const projects = {
       desc: "Jeu réseau multijoueur : serveur C avec gestion des connexions via poll(), interface graphique 2D en C++ (SFML), et IA autonome en Python pour contrôler les joueurs. Protocole personnalisé entre serveur et clients.",
       tags: ['C', 'C++', 'Python', 'SFML', 'Réseau', 'IA', 'poll()'],
       badge: 'ÉCOLE',
+      github: 'https://github.com/Listich/Zappy',
+    },
+    {
+      id: 'PJ.05b',
+      title: 'Area',
+      context: 'Epitech Toulouse · Projet école · 2026',
+      desc: "Plateforme d'automatisation type IFTTT/Zapier : services connectés, déclencheurs et actions configurables via une interface web et mobile.",
+      tags: ['Web', 'Mobile', 'API', 'Automation'],
+      badge: 'ÉCOLE',
+      github: 'https://github.com/Listich/Area',
     },
   ],
   personnel: [
@@ -110,6 +120,7 @@ export const projects = {
       tags: ['Swift', 'SwiftUI', 'iOS', 'Santé'],
       badge: 'AWARD',
       award: true,
+      github: 'https://github.com/Listich/swift-student-challenge-2026',
     },
     {
       id: 'PJ.07',
@@ -118,6 +129,7 @@ export const projects = {
       desc: 'Scan codes-barres, scoring nutritionnel en temps réel, gestion de budget, alternatives saines. Testée avec de vrais utilisateurs.',
       tags: ['React Native', 'Expo', 'TypeScript', 'Supabase'],
       badge: 'SOLO',
+      github: 'https://github.com/Listich/Nuttrition-app',
     },
     {
       id: 'PJ.08',

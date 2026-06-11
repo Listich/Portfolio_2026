@@ -133,17 +133,22 @@ function ProjectCard({ project, color, delay }) {
           ))}
         </div>
 
-        {/* Lien externe si présent */}
-        {project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, fontWeight: 700, letterSpacing: '2px', color, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4, marginTop: 4 }}
-            onClick={e => e.stopPropagation()}
-          >
-            VOIR LE SITE →
-          </a>
+        {/* Liens externes */}
+        {(project.link || project.github) && (
+          <div style={{ display: 'flex', gap: 12, marginTop: 4 }}>
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}
+                style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, fontWeight: 700, letterSpacing: '2px', color, textDecoration: 'none' }}>
+                VOIR LE SITE →
+              </a>
+            )}
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}
+                style={{ fontFamily: 'DM Mono, monospace', fontSize: 9, fontWeight: 700, letterSpacing: '2px', color, textDecoration: 'none' }}>
+                GITHUB →
+              </a>
+            )}
+          </div>
         )}
       </div>
     </FadeIn>

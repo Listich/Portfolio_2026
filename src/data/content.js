@@ -151,7 +151,7 @@ export const skills = {
     { name: 'Expo / Vite',          level: 'intermédiaire' },
     { name: 'Tailwind CSS',         level: 'intermédiaire' },
     { name: 'Framer Motion',        level: 'intermédiaire' },
-    { name: 'SFML / SDL2',          level: 'intermédiaire' },
+    { name: 'SFML / SDL2',          level: 'avancé' },
   ],
   backend: [
     { name: 'Node.js / Laravel',  level: 'intermédiaire' },

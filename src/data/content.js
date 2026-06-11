@@ -46,13 +46,12 @@ export const experiences = [
     title: 'Référente',
     company: 'E-mma · Toulouse',
     bullets: [
-      'Coordination et supervision d\'une équipe de 10 étudiants Epitech animant des ateliers de programmation pour des participants de tous âges',
-      'Pilotage des initiatives de diversité et d\'inclusion dans la tech : égalité des genres, lutte contre les stéréotypes, sensibilisation au numérique',
-      'Organisation d\'événements de sensibilisation, conférences et tables rondes visant à encourager les jeunes vers les métiers du numérique',
-      'Création d\'un environnement d\'apprentissage inclusif, valorisant chaque parcours individuel au sein de l\'association',
-      'Représentation d\'E-mma comme vecteur de changement positif dans la communauté technologique toulousaine',
+      'Coordination d\'une équipe de 10 étudiants Epitech — plus de 10 ateliers de programmation animés par an pour des publics de tous âges',
+      'Organisation d\'actions solidaires : collecte pour la Journée de la Femme et la sensibilisation au cancer du sein, dons reversés à un hôpital partenaire',
+      'Pilotage des initiatives diversité & inclusion dans la tech : lutte contre les stéréotypes de genre, sensibilisation au numérique',
+      'Représentation d\'E-mma lors de conférences et tables rondes pour encourager les jeunes vers les métiers du numérique',
     ],
-    tags: ['Leadership', 'Inclusion', 'Tech for Good', 'Coordination', 'Pédagogie'],
+    tags: ['Leadership', 'Inclusion', 'Tech for Good', 'Coordination', 'Solidarité'],
   },
 ]
 

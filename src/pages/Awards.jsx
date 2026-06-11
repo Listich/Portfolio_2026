@@ -9,13 +9,6 @@ const AWARDS = [
     tags: ['Swift', 'SwiftUI', 'iOS', 'Solo', 'WWDC26', 'Santé'],
     incoming: false,
   },
-  {
-    year: '???', org: 'SOON', badge: 'INCOMING',
-    title: 'Prochain objectif — GSoC 2027',
-    desc: 'Google Summer of Code 2027. Contribution open source C++ sur des projets structurants (XML libraries, ns-3, NASA cFS). Candidature prévue début 2027.',
-    tags: ['C++', 'Open Source', 'Google'],
-    incoming: true,
-  },
 ]
 
 
@@ -69,16 +62,16 @@ export default function Awards() {
   return (
     <div style={{ background: '#fdf6f9', minHeight: '100vh' }}>
       <PageHero
-        chapter="03"
+        chapter="06"
         chapterTitle='"TROPHY ROOM"'
-        breadcrumb="LISTICH.FR / CH.03 / TROPHY ROOM"
+        breadcrumb="LISTICH.FR / CH.06 / TROPHY ROOM"
         jp="受賞歴"
         title="AWARDS"
         desc="Distinctions et reconnaissances obtenues."
       />
       <div className="max-w-5xl mx-auto px-8 md:px-16 py-20">
 
-        <SectionHeader chapter="CH.03 / AWARDS" title="TROPHY" titleEm="ROOM" jp="受賞歴" />
+        <SectionHeader chapter="CH.06 / AWARDS" title="TROPHY" titleEm="ROOM" jp="受賞歴" />
 
         {/* Grille des awards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">

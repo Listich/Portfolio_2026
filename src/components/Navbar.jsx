@@ -5,20 +5,20 @@ import { motion, AnimatePresence } from 'framer-motion'
 const links = [
   { label: 'CH.01 HOME',     to: '/'           },
   { label: 'CH.02 ABOUT',    to: '/about'      },
-  { label: 'CH.03 AWARDS',   to: '/awards'     },
-  { label: 'CH.04 XP',       to: '/experience' },
-  { label: 'CH.05 PROJECTS', to: '/projects'   },
-  { label: 'CH.06 SKILLS',   to: '/skills'     },
+  { label: 'CH.03 XP',       to: '/experience' },
+  { label: 'CH.04 PROJECTS', to: '/projects'   },
+  { label: 'CH.05 SKILLS',   to: '/skills'     },
+  { label: 'CH.06 AWARDS',   to: '/awards'     },
   { label: 'CH.07 CONTACT',  to: '/contact'    },
 ]
 
 const mobileLinks = [
   { to: '/',           num: 'CH.01', label: 'HOME',     jp: 'ホーム'   },
   { to: '/about',      num: 'CH.02', label: 'ABOUT',    jp: '人物紹介' },
-  { to: '/awards',     num: 'CH.03', label: 'AWARDS',   jp: '受賞歴'   },
-  { to: '/experience', num: 'CH.04', label: 'XP',       jp: '職歴'     },
-  { to: '/projects',   num: 'CH.05', label: 'PROJECTS', jp: '制作実績' },
-  { to: '/skills',     num: 'CH.06', label: 'SKILLS',   jp: 'スキル'   },
+  { to: '/experience', num: 'CH.03', label: 'XP',       jp: '職歴'     },
+  { to: '/projects',   num: 'CH.04', label: 'PROJECTS', jp: '制作実績' },
+  { to: '/skills',     num: 'CH.05', label: 'SKILLS',   jp: 'スキル'   },
+  { to: '/awards',     num: 'CH.06', label: 'AWARDS',   jp: '受賞歴'   },
   { to: '/contact',    num: 'CH.07', label: 'CONTACT',  jp: '連絡先'   },
 ]
 

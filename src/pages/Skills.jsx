@@ -45,14 +45,20 @@ const SECTIONS = [
   },
 ]
 
-function SkillRow({ skill, color, index }) {
+const LEVEL_CONFIG = {
+  avancé:        (color) => ({ label: 'AVANCÉ',        bg: color,         text: 'white',    border: 'none' }),
+  intermédiaire: (color) => ({ label: 'INTERMÉDIAIRE', bg: 'transparent', text: color,      border: `1px solid ${color}66` }),
+  notions:       ()      => ({ label: 'EN COURS',       bg: 'transparent', text: '#5a8a4a',  border: '1px solid rgba(90,138,74,0.4)' }),
+}
+
+function SkillRow({ skill, color }) {
+  const cfg = (LEVEL_CONFIG[skill.level] ?? LEVEL_CONFIG.notions)(color)
   return (
     <div style={{
-      display: 'grid',
-      gridTemplateColumns: '200px 1fr auto',
+      display: 'flex',
       alignItems: 'center',
-      gap: '1.5rem',
-      padding: '14px 0',
+      justifyContent: 'space-between',
+      padding: '12px 0',
       borderBottom: '0.5px solid rgba(194,81,122,0.08)',
     }}>
       <span style={{
@@ -63,57 +69,21 @@ function SkillRow({ skill, color, index }) {
       }}>
         {skill.name}
       </span>
-
-      <div style={{
-        height: '2px',
-        background: 'rgba(194,81,122,0.1)',
-        borderRadius: '1px',
-        overflow: 'hidden',
+      <span style={{
+        fontFamily: 'DM Mono, monospace',
+        fontSize: '8px',
+        fontWeight: 700,
+        letterSpacing: '1.5px',
+        padding: '3px 10px',
+        borderRadius: 2,
+        background: cfg.bg,
+        color: cfg.text,
+        border: cfg.border,
+        whiteSpace: 'nowrap',
+        flexShrink: 0,
       }}>
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: index * 0.06, ease: 'easeOut' }}
-          style={{
-            height: '100%',
-            background: color,
-            transformOrigin: 'left',
-            width: `${skill.pct}%`,
-          }}
-        />
-      </div>
-
-      {skill.label === 'en cours' ? (
-        <span style={{
-          fontFamily: 'DM Mono, monospace',
-          fontSize: '8px',
-          fontWeight: 700,
-          letterSpacing: '1.5px',
-          padding: '2px 8px',
-          border: '0.5px solid rgba(90,138,74,0.4)',
-          borderRadius: 2,
-          color: '#5a8a4a',
-          background: 'rgba(90,138,74,0.08)',
-          whiteSpace: 'nowrap',
-        }}>
-          EN COURS
-        </span>
-      ) : (
-        <div style={{ display: 'flex', gap: '3px' }}>
-          {[1, 2, 3, 4].map(i => (
-            <div
-              key={i}
-              style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                background: i <= skill.stars ? color : 'rgba(194,81,122,0.15)',
-              }}
-            />
-          ))}
-        </div>
-      )}
+        {cfg.label}
+      </span>
     </div>
   )
 }
@@ -186,8 +156,8 @@ export default function Skills() {
 
               {/* Skill rows */}
               <div>
-                {section.items.map((skill, i) => (
-                  <SkillRow key={skill.name} skill={skill} color={section.color} index={i} />
+                {section.items.map((skill) => (
+                  <SkillRow key={skill.name} skill={skill} color={section.color} />
                 ))}
               </div>
 

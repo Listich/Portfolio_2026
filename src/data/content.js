@@ -35,10 +35,8 @@ export const experiences = [
     title: 'Stagiaire Développeuse Back-End',
     company: 'France Surgery — Iris Prevention · Toulouse',
     bullets: [
-      'Développement et test de nouvelles fonctionnalités back-end sur une plateforme médicale en production',
-      'Conception et implémentation de routes API REST (Laravel), validation des données entrantes et gestion des erreurs',
-      'Participation active à la rédaction de documentation technique (specs, guides développeur)',
-      'Optimisation du code existant : refactoring, respect des bonnes pratiques PSR et des standards Laravel',
+      'Tests de l\'API REST Iris sur plateforme médicale en production : scénarios fonctionnels, cas limites et validation des réponses',
+      'Rédaction de documentation technique (specs API, guides développeur) et d\'un guide utilisateur complet pour l\'application',
       'Travail en environnement Agile avec revues de code et intégration continue',
     ],
     tags: ['PHP', 'Laravel', 'REST API', 'MySQL', 'Git', 'Agile'],

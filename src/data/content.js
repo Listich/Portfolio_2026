@@ -114,7 +114,7 @@ export const projects = {
     {
       id: 'PJ.07',
       title: 'NutriApp',
-      context: 'Application mobile · Solo',
+      context: 'Application mobile · Solo · 2026',
       desc: 'Scan codes-barres, scoring nutritionnel en temps réel, gestion de budget, alternatives saines. Testée avec de vrais utilisateurs.',
       tags: ['React Native', 'Expo', 'TypeScript', 'Supabase'],
       badge: 'SOLO',
@@ -125,14 +125,6 @@ export const projects = {
       context: 'Projet perso · Rust',
       desc: "Serveur de chat TCP en Rust utilisant POSIX sockets et select() pour le multiplexage.",
       tags: ['Rust', 'TCP', 'Sockets', 'select()'],
-      badge: 'PERSO',
-    },
-    {
-      id: 'PJ.09',
-      title: 'Sims 4 File Manager',
-      context: 'Outil perso · Python',
-      desc: 'Évolution Batch → HTA → PyQt6 compilé via PyInstaller. UAC elevation, fenêtre de log colorée, gestion fichiers EA.',
-      tags: ['Python', 'PyQt6', 'PyInstaller', 'Windows'],
       badge: 'PERSO',
     },
   ],
